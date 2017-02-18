@@ -10,8 +10,75 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.entersnowman.testtask.MainActivity">
 
-    <TextView
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/fd"
+            android:text="Set start date"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/sd"
+            android:text="Set end date"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow"
+        android:id="@+id/tableRow2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Set start date"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:id="@+id/fd_tv"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:text="Set end date"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/sd_tv"
+            android:layout_weight="1"/>
+
+    </TableRow>
+
+    <Button
+        android:text="Get Exchange Rates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/getExchange"
+        android:layout_below="@+id/tableRow2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Start date must be before end date"
+        android:textSize="22sp"
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/getExchange"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/warning" />
+
+
 </RelativeLayout>
